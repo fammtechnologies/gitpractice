@@ -1,0 +1,21 @@
+name: Real-Time Log Demo
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  monitor-execution:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Check
+        uses: actions/checkout@v4
+
+      - name: Real-Time Stream Simulation
+        run: |
+          echo "🏁 Initializing pipeline runner..."
+          sleep 2
+          echo "📦 Fetching project metadata..."
+          sleep 2
+          echo "🚀 Process complete!"
